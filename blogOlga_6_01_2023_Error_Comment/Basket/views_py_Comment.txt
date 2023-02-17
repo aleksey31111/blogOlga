@@ -1,0 +1,54 @@
+from knowledge.models import Article, Comment
+from knowledge.forms import CommentForm
+
+
+class EArticleView(View):
+    template\_name = 'post/article.html'
+    comment\_form = CommentForm
+
+    def get(self, request, *args, **kwargs):
+        article = get\_object\_or\_404(Article, id=self.kwargs['article\_id'])
+        context = {}
+        context.update(csrf(request))
+        user = auth.get\_user(request)
+        # Помещаем в контекст все комментарии, которые относятся к статье
+        # попутно сортируя их по пути, ID автоинкрементируемые, поэтому
+        # проблем с иерархией комментариев не должно возникать
+        context['comments'] = article.comment\_set.all().order\_by('path')
+        context['next'] = article.get\_absolute\_url()
+        # Будем добавлять форму только в том случае, если пользователь авторизован
+        if user.is\_authenticated:
+            context['form'] = self.comment\_form
+
+        return render\_to\_response(template\_name=self.template\_name, context=context)
+
+# Декораторы по которым, только авторизованный пользователь
+# может отправить комментарий и только с помощью POST запроса
+@login\_required
+@require\_http\_methods(["POST"])
+def add\_comment(request, article\_id):
+
+    form = CommentForm(request.POST)
+    article = get\_object\_or\_404(Article, id=article\_id)
+
+    if form.is\_valid():
+        comment = Comment()
+        comment.path = []
+        comment.article\_id = article
+        comment.author\_id = auth.get\_user(request)
+        comment.content = form.cleaned\_data['comment\_area']
+        comment.save()
+
+        # Django не позволяет увидеть ID комментария по мы не сохраним его,
+        # хотя PostgreSQL имеет такие средства в своём арсенале, но пока не будем
+        # работать с сырыми SQL запросами, поэтому сформируем path после первого сохранения
+        # и пересохраним комментарий
+        try:
+            comment.path.extend(Comment.objects.get(id=form.cleaned\_data['parent\_comment']).path)
+            comment.path.append(comment.id)
+        except ObjectDoesNotExist:
+            comment.path.append(comment.id)
+
+        comment.save()
+
+    return redirect(article.get\_absolute\_url())

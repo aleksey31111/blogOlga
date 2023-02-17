@@ -1,0 +1,68 @@
+# accounts/models.py
+12 昵称 Никнейм 12 Nìchēng
+13 创建时间 время создания 13 Chuàngjiàn shíjiān
+14 修改时间 Изменить время 14 Xiūgǎi shíjiān
+15 创建来源 создать источник 15 Chuàngjiàn láiyuán
+33 用户 пользователь 33 Yònghù
+# djangoblog/accounts/test.py
+147 错误的邮箱  Неправильный адрес электронной почты
+    147 Cuòwù de yóuxiāng
+153 错误的邮箱  Неправильный адрес электронной почты
+    153 Cuòwù de yóuxiāng
+170 # 验证用户密码是否修改成功
+    # Убедитесь, что пароль пользователя был успешно изменен
+    170 # Yànzhèng yònghù mìmǎ shìfǒu xiūgǎi chénggōng
+194 未找到邮箱对应的用户
+    Пользователь, соответствующий адресу электронной почты, не найден
+    194 Wèi zhǎodào yóuxiāng duìyìng de yònghù
+216 验证码错误  Ошибка кода подтверждения
+    216 Yànzhèng mǎ cuòwù
+
+# djangoblog/accounts/user_login_backend.py
+7 允许使用用户名或邮箱登录
+    Разрешить вход с именем пользователя или электронной почтой
+    7 Yǔnxǔ shǐyòng yònghù míng huò yóuxiāng dēnglù
+
+# djangoblog/accounts/utils.py
+12  发送重设密码验证码  Отправить код подтверждения сброса пароля
+    12 Fāsòng chóng shè mìmǎ yànzhèng mǎ
+    Args:
+14        to_mail: 接受邮箱  принять электронную почту 14 Jiēshòu yóuxiāng
+15        subject: 邮件主题  Тема письма 15 Yóujiàn zhǔtí
+16        code: 验证码  проверочный код 16 Yànzhèng mǎ
+18 您正在重设密码，验证码为：
+   Вы сбрасываете свой пароль, код подтверждения:
+   18 Nín zhèngzài chóng shè mìmǎ, yànzhèng mǎ wèi:
+19 5分钟内有效，请妥善保管
+    Действителен в течение 5 минут, храните его в безопасности.
+    19 5 Fēnzhōng nèi yǒuxiào, qǐng tuǒshàn bǎoguǎn
+
+24    验证code是否有效
+    Убедитесь, что код действителен
+    24 Yànzhèng code shìfǒu yǒuxiào
+25    Args:
+26        email: 请求邮箱
+    запрос по электронной почте
+    26 Qǐngqiú yóuxiāng
+27        code: 验证码
+    проверочный код
+    27 Yànzhèng mǎ
+28    Return:
+29        如果有错误就返回错误str
+    Возвращает str ошибки, если есть ошибка
+    29 Rúguǒ yǒu cuòwù jiù fǎnhuí cuòwù str
+30    Node:
+31        这里的错误处理不太合理，应该采用raise抛出
+    Обработка ошибок здесь неразумна, следует использовать повышение
+    31 Zhèlǐ de cuòwù chǔlǐ bù tài hélǐ, yīnggāi cǎiyòng raise pāo chū
+32        否测调用方也需要对error进行处理
+    Никакой тестовый вызывающий объект также не должен обрабатывать ошибку
+    32 Fǒu cè diàoyòng fāng yě xūyào duì error jìnxíng chǔlǐ
+
+36 验证码错误  Ошибка кода подтверждения 36 Yànzhèng mǎ cuòwù
+
+40 设置code  установить код 40 Shèzhì code
+45 获取code  Получить code 45 Huòqǔ code
+
+
+

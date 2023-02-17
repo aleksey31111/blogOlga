@@ -1,0 +1,48 @@
+{% extends 'home/base.html' %}
+{% load bootstrap3 %}
+{% block page %}
+    <article>
+        <h1>{{ article.article\_title }}</h1>
+        {{ article.article\_content|safe }}
+    </article>
+    <h2>Комментарии</h2>
+    {% for comment in comments %}
+        <a name="comment-{{ comment.id }}"></a>
+        <div class="row" id="{{ comment.id }}">
+            <div class="col-md-{{ comment.get\_col }} col-md-offset-{{ comment.get\_offset }}">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong>{{ comment.author\_id.get\_full\_name|default:comment.author\_id.username }}</strong>&nbsp;&nbsp;
+                        {{ comment.pub\_date }}
+                        <a href="#comment-{{ comment.id }}">#</a>
+                    </div>
+                    <div class="panel-body">
+                        <div>{{ comment.content|safe }}</div>
+                        {% if form %}<a class="btn btn-default btn-xs pull-right"
+                                        onclick="return show\_comments\_form({{ comment.id }})">
+                            {% bootstrap\_icon "share-alt" %}&nbsp;&nbsp;Ответить</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% if form %}
+        <h3 id="write\_comment"><a onclick="return show\_comments\_form('write\_comment')">Написать комментарий</a></h3>
+        <form id="comment\_form" action="{% url 'post:add\_comment' article.id %}" method="post">
+        {% csrf\_token %}
+        {% bootstrap\_form form %}
+        {% buttons %}
+            <button type="submit" class="btn btn-primary">{% bootstrap\_icon "comment" %}&nbsp;&nbsp;Комментировать</button>
+        {% endbuttons %}
+        </form>
+    {% else %}
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">Комментарии</h3>
+            </div>
+            <div class="panel-body">
+                Только авторизованные пользователи могут оставлять комментарии.<br />
+            </div>
+        </div>
+    {% endif %}

@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #264b5d;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.content .wrap{
+    background: #FFF;
+    padding: 40px;
+    box-sizing: border-box;
+    display: block;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: #81d4fa;
+    text-decoration: none;
+    padding: 20px;
+}
+a:hover{
+    color: #FFC;
+}
+.header{
+    background: #121212;
+}
+.meinmenu{
+    display: flex;
+    align-items: left;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+.logo{
+    flex-basis: 40%;
+}
+.last{
+    flex-basis: 30%;
+    text-align: right;
+    color: #81d4fa;
+}
+
+.text img  {
+    border: 2px solid #55c5e9; /* Рамка вокруг фотографии */
+    padding: 15px;  /*Расстояние от картинки до рамки */
+    background: #666; /* Цвет фона */
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+   }
+
+
+.text {
+    border: 2px solid #55c5e9;
+    padding: 15px;
+    background: #737373;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 50%
+    margin: 10px;        
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
+    /* margin-top: 10px; */
+    /* padding-bottom: 10px; */
+}
+
+.sidebar ul{
+    width: 30%;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+.sidebar a{
+    padding: 20px;
+    background: #264b5d;
+    display: block;
+    border: 1px solid #FFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+.selected{
+    font-size: 18px;
+    padding: 20px;
+    border: 1px solid #FFF;
+    font-weight: bold;
+    background: #81d4fa;
+}
+.main li{
+    border: 1px solid #264b5d;
+    margin-bottom: 40px;
+}
+.image{
+    max-width: 50%;
+    float: left;
+    margin-right: 20px;
+}
+.first, .date{
+    padding: 10px, 20px;
+    background: #264b5d;
+    font-size: 18px;
+    color: #FFF;
+    margin: 0;
+}
+.text{
+    padding: 20px 20px 0;
+}
+.text h2{
+    margin-top: 0;
+}
+.text a{
+    padding-left: 0;
+}
+.text a:hover{
+    color: #264b5d;
+}
+.post h1{
+    margin-top: 0;
+}
+.post{
+    font-size: 16px;
+}

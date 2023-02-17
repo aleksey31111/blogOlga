@@ -1,0 +1,106 @@
+from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import User
+from django.urls import reverse
+from django.contrib.postgres.fields import ArrayField
+
+
+class Post(models.Model):
+    STATUS_CHOICES = (
+        ('draft', 'Не опубликован'),
+        ('published', 'Опубликован'),
+    )
+    title = models.CharField(max_length=250, verbose_name='Название поделки')
+    slug = models.SlugField(max_length=250, unique_for_date='publish', verbose_name='URL')
+    photo = models.ImageField(upload_to="photos/%Y/%m/%d", blank=True, verbose_name="Фото")
+    body = models.TextField(verbose_name='Описание поделки')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts', verbose_name='Автор')
+    publish = models.DateTimeField(default=timezone.now, verbose_name="Время публикации")
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Время занесения на сайт')
+    updated = models.DateTimeField(auto_now=True, verbose_name='Время обновления')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='published',
+                              verbose_name='Статус публикации')
+    # status = models.BooleanField(default=False, verbose_name='Статья опубликована')
+    cat = models.ForeignKey('Category', on_delete=models.PROTECT, verbose_name="Категория")
+
+    def __str__(self):
+        return self.title
+
+    def get_absolut_url(self):
+        return reverse('post', kwargs={'post_slug': self.slug})
+
+    class Meta:
+        verbose_name = 'Блог Творчества'
+        verbose_name_plural = "Блог Творчеств"
+        ordering = ('-created',)
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, db_index=True, verbose_name="Категория")
+    slug = models.SlugField(max_length=100, unique=True, db_index=True, verbose_name="URL")
+
+    def __str__(self):
+        return self.name
+
+    def get_absolut_url(self):
+        return reverse('category', kwargs={'cat_slug': self.slug})
+
+    class Meta:
+        verbose_name = "Категория"
+        verbose_name_plural = "Категории"
+
+
+# class Comment(models.Model):
+# #     # post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments', verbose_name='Отношение к статъе')
+# #     # name = models.CharField(max_length=100, verbose_name='Имя')
+# #     # email = models.EmailField(verbose_name='Электронный адрес')
+# #     # body = models.TextField(verbose_name='Содержание комментария')
+# #     # created_on = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+# #     # active = models.BooleanField(default=False, verbose_name='Активный')
+# #     #
+# #     # def __str__(self):
+# #     #     return 'Comment {} by {}'.format(self.body, self.name)
+# #     #
+# #     # class Meta:
+# #     #     verbose_name = 'Комментарий'
+# #     #     verbose_name_plural = 'Комментарии'
+# #     #     ordering = ['-created_on']
+#     path = ArrayField(models.IntegerField, verbose_name='Путь')
+#     name = models.CharField(max_length=200, verbose_name="Имя комментатора")
+#     email = models.EmailField(verbose_name='Электронная почта')
+#     article_id = models.ForeignKey(Post, on_delete=models.CASCADE, verbose_name='ID Поделки')
+#     author_id = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Автор Комментария')
+#     content = models.TextField(verbose_name='Комментарий')
+#     pub_date = models.DateTimeField(default=timezone.now, verbose_name='Дата комментария')
+#
+#     def __str__(self):
+#         return self.content
+#
+#     def get_offset(self):
+#         level = len(Comment.path) - 1
+#         if level > 5:
+#             level = 5
+#         return level
+#
+#     def get_col(self):
+#         level = len(Comment.path) - 1
+#         if level > 5:
+#             level = 5
+#         return 12 - level
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments', verbose_name='Отношение к статъе')
+    name = models.CharField(max_length=100, verbose_name='Имя')
+    email = models.EmailField(verbose_name='Электронный адрес')
+    body = models.TextField(verbose_name='Содержание комментария')
+    created_on = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+    active = models.BooleanField(default=False, verbose_name='Активный')
+
+    def __str__(self):
+        return 'Comment {} by {}'.format(self.body, self.name)
+
+    class Meta:
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
+        ordering = ['-created_on']

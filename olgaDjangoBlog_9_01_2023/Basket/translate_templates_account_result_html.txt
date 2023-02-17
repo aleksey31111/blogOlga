@@ -1,0 +1,5 @@
+# templates/account/result_html
+16 登录  Авторизоваться
+    16 Dēnglù
+18 回到首页  вернуться на главную страницу
+    18 Huí dào shǒuyè

@@ -1,0 +1,3 @@
+# templates/blog/links_list.html
+6 友情链接  Ссылки
+    6 Yǒuqíng liànjiē

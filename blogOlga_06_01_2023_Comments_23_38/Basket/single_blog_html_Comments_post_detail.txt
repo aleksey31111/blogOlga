@@ -1,0 +1,19 @@
+                    <div class="user_details">
+                        <div class="float-left">
+                            <a href="#">Добавить в избранное</a>
+                            <a href="{% url 'post_detail' %}">Оставить комментарий</a>
+                        </div>
+                        <div class="float-right">
+                            <div class="media">
+                                <div class="media-body">
+
+                                    <h5>{{ post.title }}</h5>
+                                    <p>Дата создания {{ post.created }}</p>
+
+                                </div>
+                                <div class="d-flex">
+                                    <img src="img/blog/user-img.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>

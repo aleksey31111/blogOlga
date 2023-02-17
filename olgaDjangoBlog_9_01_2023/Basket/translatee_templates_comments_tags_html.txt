@@ -1,0 +1,28 @@
+# templates/comments/comments/tags/comment_item.html
+25 回复给:@  Ответить на: @
+    25 Huífù gěi:@
+31 回复   Отвечать
+    31 Huífù
+# templates/comments/comments/tags/comment_item_tree.html
+29 回复  Отвечать
+    29 Huífù
+40 回复给  ответить на
+    40 Huífù gěi
+40 回复  Отвечать
+    40 Huífù
+# templates/comments/comments/tags/comment_list.html
+9 评论  Комментарий
+    9 Pínglùn
+29  上一页  Предыдущая страница
+    29 Shàng yī yè
+34 下一页  Предыдущая страница
+    34 Shàng yī yè
+# templates/comments/tags/post_comment.html
+6 取消回复  отменить ответ
+    6 Qǔxiāo huífù
+18 支持markdown  поддержка уценки
+    18 Zhīchí markdown
+19 发表评论  Комментарий
+    19 Fābiǎo pínglùn
+21 取消回复  отменить ответ
+    21 Qǔxiāo huífù

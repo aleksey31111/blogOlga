@@ -1,0 +1,8 @@
+# templates/blog/tags/article_pagination.html
+2 文章导航  Навигация по статьям
+    2 Wénzhāng dǎoháng
+6 早期文章  более ранние статьи
+    6 Zǎoqí wénzhāng
+9 较新文章  новые статьи
+    9 Jiào xīn wénzhāng
+

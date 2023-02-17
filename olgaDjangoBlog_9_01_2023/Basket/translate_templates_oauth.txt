@@ -1,0 +1,15 @@
+# /templates/oauth/bindsuccess.html
+16 登录  Авторизоваться
+    16 Dēnglù
+18 回到首页  вернуться на главную страницу
+    18 Huí dào shǒuyè
+# templates/oauth/oauth_applications.html
+4 快捷登录:  быстрый вход:
+    4 Kuàijié dēnglù:
+# templates/oauth/require_email.html
+7 绑定您的邮箱账号  Привяжите свою учетную запись электронной почты
+    7-8 Bǎng dìng nín de yóuxiāng zhànghào
+28 提交  Отправить
+    28 Tíjiāo
+43 登录  Авторизоваться
+    43 Dēnglù

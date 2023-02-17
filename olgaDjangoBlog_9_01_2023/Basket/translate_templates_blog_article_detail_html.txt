@@ -1,0 +1,7 @@
+# templates/blog/article_detail.html
+37 文章导航  навигация по статьям
+    37 Wénzhāng dǎoháng
+60 您还没有登录，请您  Вы не вошли в систему, пожалуйста
+    60 Nín hái méiyǒu dēnglù, qǐng nín
+61 登录  Dēnglù
+    61 Авторизоваться

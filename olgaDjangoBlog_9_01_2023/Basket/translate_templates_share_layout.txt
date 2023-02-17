@@ -1,0 +1,16 @@
+# djangoblog/templates/share_layout/analyticscode.html
+24 百度统计  Статистика Байду
+    24 Bǎidù tǒngjì
+# djangoblog/templates/share_layout/footer.html
+23 百度统计  Статистика Байду
+    23 Bǎidù tǒngjì
+35 本页面加载耗时:  Время загрузки этой страницы:
+    35 Běn yèmiàn jiāzài hào shí:
+# djangoblog/templates/share_layout/nav.html
+2 菜单  меню
+    2 Càidān
+8 首页  титульная страница
+    8 Shǒuyè
+26 文章归档  архив статей
+    26 Wénzhāng guīdǎng
+README.md

@@ -1,0 +1,7 @@
+# templates/blog/article_archives.html
+6 文章归档  архив статей
+    6 Wénzhāng guīdǎng
+23 文章归档  архив статей
+    23 Wénzhāng guīdǎng
+31 年  Nián
+    год

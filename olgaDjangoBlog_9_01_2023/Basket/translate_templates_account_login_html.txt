@@ -1,0 +1,3 @@
+# templates/account/login.html
+41 忘记密码  Забыли пароль
+    41 Wàngjì mìmǎ

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/djangoShop/myshop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/djangoShop/myshop/myshop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hello_world_07_01_2023" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hello_world_07_01_2023/mysite" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/olgaDjangoBlog_9_01_2023/djangoblog" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

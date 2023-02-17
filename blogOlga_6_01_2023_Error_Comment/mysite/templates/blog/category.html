@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load blog_tags %}
+{% block content %}
+
+	<!--================ Banner Area =================-->
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5"></div>
+				<div class="col-lg-7">
+					<div class="blog_text_slider">
+						<img class="img-fluid" src="{% static 'img/banner/furnitur.png' %}"  alt="" style="display:block; margin:auto;">
+							<div class="blog-meta bottom d-flex justify-content-start align-items-center flex-wrap">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Banner Area =================-->
+
+	<!--================Category Area =================-->
+	<section class="category_area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="row">
+						<div class="col-lg-12">
+							<div  data-wow-duration="1s">
+								<figure>
+									<img src="{{ posts.photo.url }}" alt="">
+								</figure>
+								<div class="overlay"></div>
+								{% for c in posts %}
+								<div class="text-wrap">
+									<h3>
+										<a href="{{ c.get_absolut_url }}">{{ c.title }}</a>
+									</h3>
+									<div class="blog-meta white d-flex justify-content-between align-items-center flex-wrap">
+										<div class="meta">
+
+												<span class="icon fa fa-calendar"></span>Обновлено: {{ c.updated }}
+												<br>
+												{{ c.status }}
+												<br>
+												<span class="icon fa fa-comments"></span>Комментариев: 05
+
+										</div>
+										<div>
+											<a class="read_more" href="{{ c.get_absolut_url }}">Read More</a>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+				<div class="col-lg-4">
+					<div class="blog_right_sidebar">
+						<aside class="single_sidebar_widget search_widget" style="margin-left:970px;;">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Search Posts">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
+								</span>
+							</div><!-- /input-group -->
+							<div class="br"></div>
+						</aside>
+						<aside class="single_sidebar_widget author_widget" style="margin-left:1000px;">
+							<img class="author_img img-fluid" src="{% static 'img/blog/authorauthor.jpg' %}" alt="" style="width:150px; height:150px;">
+							<h4>Алексей</h4>
+							<p>Написавший блог, скопированного с freehtmlthemes.ru шаблоном</p>
+
+							<p>Учится, Учится ... и ее раз Учится
+							<div class="social_icon">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-github"></i></a>
+								<a href="#"><i class="fa fa-behance"></i></a>
+							</div>
+							<div class="br"></div>
+						</aside>
+{% endblock %}

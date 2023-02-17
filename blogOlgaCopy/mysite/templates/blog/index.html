@@ -1,0 +1,98 @@
+{% extends 'base_index.html' %}
+{% load static %}
+{% block content %}
+	<!--================ Home Banner Area =================-->
+<h1>{{ title }}</h1>
+	<section class="home_banner_area">
+		<div class="owl-carousel owl-theme" id="home-owl">
+			<div class="slide-item owl-lazy" data-src="{% static 'img/banner/furniture_set.jpg' %}">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5"></div>
+						<div class="col-lg-7">
+							<div class="blog_text_slider">
+								<div>
+									<div>
+										<div class="meta">
+
+										</div>
+										<div>
+											<a class="read_more" href="{% url 'index' %}">Read More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	<!--================ End Home Banner Area =================-->
+
+
+	<!--================ Popular Post Area =================-->
+	<section class="popular_post">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title">
+						<h1>Популярные <br> Сохраненные посты</h1><br>
+						<p>
+							 Делание по дому.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="single-popular-post d-flex align-items-center flex-row">
+						<div class="icon">
+							<img src="img/popular-post/p1.jpg" alt="">
+						</div>
+						<div class="desc">
+							{% for c in posts %}
+							<ul>
+								<h4>
+									<a href="#">{{ c.category }}</a>
+								</h4>
+							</ul>
+							{% endfor %}
+							<div class="blog-meta d-flex justify-content-between align-items-center flex-wrap">
+								<div class="meta">
+									{% for get in posts %}
+									<a href="{{ get.get_absolut_url }}">
+										<span class="icon fa fa-name">{{ get.title }}</span>
+									</a>
+									<a href="{{ get.get_absolut_url }}">
+										<span class="icon fa fa-calendar">{{ get.created }}</span>
+									</a>
+									<a href="{{ get.get_absolut_url }}">
+										<span class="icon fa fa-comments"></span> <br>
+									</a>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-popular-post d-flex align-items-center flex-row">
+						<div class="icon">
+							<img src="img/popular-post/p9.jpg" alt="">
+						</div>
+						<div class="desc">
+							{% for n in posts %}
+							<h4>
+								<a href="{{ n.get_absolut_url }}">{{ n.title }}</a>
+								<a href="{{ n.get_absolut_url }}">{{ n.photo.url }}</a>
+							</h4>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Popular Post Area =================-->
+{% endblock %}

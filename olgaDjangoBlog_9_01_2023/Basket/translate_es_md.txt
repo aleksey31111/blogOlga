@@ -1,0 +1,82 @@
+    集成Elasticsearch
+    如果你已经有了Elasticsearch环境，那么可以将搜索从Whoosh换成Elasticsearch，集成方式也很简单， 首先需要注意如下几点:
+
+    你的Elasticsearch支持ik中文分词
+    你的Elasticsearch版本>=7.3.0
+    接下来在settings.py做如下改动即可：
+
+    增加es链接，如下所示：
+    ELASTICSEARCH_DSL = {
+        'default': {
+            'hosts': '127.0.0.1:9200'
+        },
+    }
+    修改HAYSTACK配置：
+    HAYSTACK_CONNECTIONS = {
+        'default': {
+            'ENGINE': 'djangoblog.elasticsearch_backend.ElasticSearchEngine',
+        },
+    }
+    然后终端执行:
+
+    ./manage.py build_index
+    这将会在你的es中创建两个索引，
+    分别是blog和performance，
+    其中blog索引就是搜索所使用的，
+    而performance会记录每个请求的响应时间，
+    以供将来优化使用。
+    Интеграция Elasticsearch
+    Если у вас уже есть среда Elasticsearch, вы можете изменить поиск с Whoosh на Elasticsearch.Способ интеграции также очень прост.Сначала нужно обратить внимание на следующие моменты:
+
+    Ваш Elasticsearch поддерживает сегментацию китайских слов ik
+    Ваша версия Elasticsearch >= 7.3.0
+    Затем внесите следующие изменения в settings.py:
+
+    Добавьте ссылку es, как показано ниже:
+    ELASTICSEARCH_DSL = {
+        'По умолчанию': {
+            «хосты»: «127.0.0.1:9200»
+        },
+    }
+    Измените конфигурацию HAYSTACK:
+    HAYSTACK_CONNECTIONS = {
+        'По умолчанию': {
+            'ENGINE': 'djangoblog.elasticsearch_backend.ElasticSearchEngine',
+         },
+    }
+    Затем терминал выполняет:
+
+    ./manage.py build_index
+    Это создаст два индекса в вашем es,
+    а именно блог и производительность,
+    где индекс блога используется для поиска,
+    а производительность будет записывать
+    время ответа на каждый запрос для
+    будущей оптимизации.
+
+    Jíchéng Elasticsearch rúguǒ nǐ
+    yǐjīng yǒule Elasticsearch huánjìng,
+    nàme kěyǐ jiāng sōusuǒ cóng Whoosh
+    huàn chéng Elasticsearch, jíchéng
+    fāngshì yě hěn jiǎndān, shǒuxiān
+    xūyào zhùyì rúxià jǐ diǎn:
+    Nǐ de Elasticsearch zhīchí ik
+    zhōngwén fēncí nǐ de Elasticsearch
+    bǎnběn >=7.3.0 Jiē xiàlái zài
+    settings.Py zuò rúxià gǎidòng
+    jí kě: Zēngjiā es liànjiē,
+    rúxià suǒ shì:
+    ELASTICSEARCH_DSL = { 'default': { 'Hosts': '127.0.0.1:9200' }, }
+    Xiūgǎi HAYSTACK pèizhì:
+    HAYSTACK_CONNECTIONS = {
+        'default':
+        {
+            'ENGINE': 'Djangoblog.Elasticsearch_backend.ElasticSearchEngine',
+        },
+    }
+    ránhòu zhōngduān zhíxíng:
+    ./Manage.Py
+    build_index zhè jiāng huì zài nǐ de es zhōng chuàngjiàn liǎng gè suǒyǐn,
+    fēnbié shì blog hé performance, qízhōng blog suǒyǐn jiùshì sōusuǒ suǒ shǐyòng de,
+    ér performance huì jìlù měi gè qǐngqiú de xiǎngyìng shíjiān,
+    yǐ gōng jiānglái yōuhuà shǐyòng.

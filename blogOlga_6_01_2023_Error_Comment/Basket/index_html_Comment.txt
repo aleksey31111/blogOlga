@@ -1,0 +1,10 @@
+<!-- 155 -->
+{% bootstrap_icon "share-alt" %}&nbsp;&nbsp;Ответить</a>
+<!-- 157 -->
+
+<!-- 166 -->
+{% bootstrap_form form %}
+        {% buttons %}
+            <button type="submit" class="btn btn-primary">{% bootstrap\_icon "comment" %}&nbsp;&nbsp;Комментировать</button>
+        {% endbuttons %}
+<!-- 171 -->

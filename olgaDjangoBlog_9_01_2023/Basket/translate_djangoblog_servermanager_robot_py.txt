@@ -1,0 +1,84 @@
+# djangoblog/servermanager/robot.py
+59 没有找到相关文章。
+    Похожих статей не найдено.
+    59 Méiyǒu zhǎodào xiāngguān wénzhāng.
+66 所有文章分类目录：
+    Все категории статей:
+    66 Suǒyǒu wénzhāng fēnlèi mùlù:
+76 暂时还没有文章
+    Статей пока нет
+    76 Zhànshí hái méiyǒu wénzhāng
+81 欢迎关注!
+    Добро пожаловать!
+    81 Huānyíng guānzhù!
+82 默认会与图灵机器人聊天 Чат с Turingbot по умолчанию
+    82 Mòrèn huì yǔ tú líng jīqìrén liáotiān
+83 你可以通过下面这些命令来获得信息
+    Вы можете получить информацию с помощью следующих команд
+    83 Nǐ kěyǐ tōngguò xiàmiàn zhèxiē mìnglìng lái huòdé xìnxī
+84 ?关键字搜索文章. ? Поиск статей по ключевым словам.
+    84 ? Guānjiàn zì sōusuǒ wénzhāng.
+85 如?python. Например? python.
+    85 Rú?Python.
+86 category获得文章分类目录及文章数.
+    category Получает каталог классификации статей и количество статей.
+    86 Category huòdé wénzhāng fēnlèi mùlù jí wénzhāng shù.
+87 category-***获得该分类目录文章
+    категория-*** Получить статьи в этой категории
+    87 Category-***huòdé gāi fēnlèi mùlù wénzhāng
+88 如category-python Например, категория-python
+    88 Rú category-python
+89 recent获得最新文章 недавние - Получить последние статьи
+    89 Recent huòdé zuìxīn wénzhāng
+90 help - 获得帮助. help - Получить помощь.
+    90 Help - huòdé bāngzhù.
+91 weather:获得天气
+    91 Weather: Huòdé tiānqì
+92 如 weather 西安  Например, погода: Сиань
+    92 Rú weather: Xī'ān
+93 idcard:获得身份证信息
+    idcard: получить информацию об удостоверении личности
+    93 Idcard: Huòdé shēnfèn zhèng xìnxī
+94 如idcard:61048119xxxxxxxxxx Например, idcard: 61048119xxxxxxxxxxxx
+    94 Rú idcard:61048119Xxxxxxxxxx
+95 music:音乐搜索  музыка: поиск музыки
+    95 Music: Yīnyuè sōusuǒ
+96 如music:阴天快乐 Такие как музыка: счастливый пасмурный день
+    96 Rú music: Yīn tiān kuàilè
+97 PS:以上标点符号都不支持中文标点
+    PS: ни один из вышеперечисленных знаков препинания
+    не поддерживает китайскую пунктуацию.
+    97 PS: Yǐshàng biāodiǎn fúhào dōu bù zhīchí zhōngwén biāodiǎn
+104 建设中...  в разработке...
+    104 Jiànshè zhōng...
+109 建设中...  в разработке...
+    109 Jiànshè zhōng...
+130 未找到相关命令，请输入hepme获得帮助。
+    Соответствующая команда не найдена, для получения помощи введите hepme(helpme).
+    130 Wèi zhǎodào xiāngguān mìnglìng, qǐng shūrù hepme huòdé bāngzhù.
+138 命令执行出错  ошибка выполнения команды
+    138 Mìnglìng zhí háng chūcuò
+181 退出成功  выйти успешно
+    181 Tuìchū chénggōng
+185 输入管理员密码  Введите пароль администратора
+    185 Shūrù guǎnlǐ yuán mìmǎ
+193 验证通过,请输入命令或者要执行的命令代码:输入helpme获得帮助
+    "Проверка пройдена, пожалуйста, " \
+    "введите команду или код команды для выполнения: " \
+    "введите helpme, чтобы получить помощь"
+    193 Yànzhèng tōngguò, qǐng shūrù mìnglìng huòzhě yào
+    zhíxíng de mìnglìng dàimǎ: Shūrù helpme huòdé bāngzhù
+200 超过验证次数   Время проверки превышено
+    200 Chāoguò yànzhèng cìshù
+203 验证失败，请重新输入管理员密码:
+    Аутентификация не удалась, пожалуйста,
+    введите пароль администратора еще раз:
+    203 Yànzhèng shībài, qǐng chóngxīn shūrù guǎnlǐ yuán mìmǎ:
+213 确认执行:  Подтвердить выполнение:
+    213 Quèrèn zhíxíng:
+213 命令?  Порядок?
+    213 Mìnglìng?
+236 没有找到相关文章。  Похожих статей не найдено.
+    236 Méiyǒu zhǎodào xiāngguān wénzhāng.
+
+

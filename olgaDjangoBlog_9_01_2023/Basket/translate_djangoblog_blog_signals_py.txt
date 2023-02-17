@@ -1,0 +1,3 @@
+# djangoblog/blog_signals.py
+49 失败邮箱号:  Номер почтового ящика с ошибкой:
+    49 Shībài yóuxiāng hào:

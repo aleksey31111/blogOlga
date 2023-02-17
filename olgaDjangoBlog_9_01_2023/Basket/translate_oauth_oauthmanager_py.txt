@@ -1,0 +1,17 @@
+# oauth/oauthmanager.py
+16 oauth授权失败异常
+    исключение сбоя авторизации oauth
+    16 Oauth shòuquán shībài yìcháng
+21 获取用户授权
+    Получить авторизацию пользователя
+    21 Huòqǔ yònghù shòuquán
+23 获取token
+    получить токен
+    21 Huòqǔ token
+25 获取用户信息
+    Получить информацию о пользователе
+    25 Huòqǔ yònghù xìnxī
+27 icon图标名
+    значок имя значка
+    27 Icon túbiāo míng
+

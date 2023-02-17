@@ -1,0 +1,9 @@
+# djangoblog/owntraks/models.py
+8 用户  пользователь
+    8 Yònghù
+9 纬度  широта
+    9 Wěidù
+10 经度  долгота
+    10 Jīngdù
+11 创建时间  время создания
+    11 Chuàngjiàn shíjiān

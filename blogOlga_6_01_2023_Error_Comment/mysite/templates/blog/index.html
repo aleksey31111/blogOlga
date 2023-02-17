@@ -1,0 +1,79 @@
+{% extends 'base_index.html' %}
+{% load static %}
+{% load blog_tags %}
+{% block content %}
+	<!--================ Home Banner Area =================-->
+<h1>{{ title }}</h1>
+	<section class="home_banner_area">
+		<div class="owl-carousel owl-theme" id="home-owl">
+			<div class="slide-item owl-lazy" data-src="{% static 'img/banner/furniture_set.jpg' %}">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5"></div>
+						<div class="col-lg-7">
+							<div class="blog_text_slider">
+
+
+									<div class="blog-meta bottom d-flex justify-content-between align-items-center flex-wrap">
+
+									<div>
+											<a class="read_more" href="#" style="color:red;font-size:19px">Read More</a>
+										</div>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	<!--================ End Home Banner Area =================-->
+
+
+	<!--================ Popular Post Area =================-->
+			<section class="popular_post">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="main_title">
+								<h1>Популярные <br> Сохраненные посты</h1><br>
+								<p>
+									 Делание по дому.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="col-lg-4 col-md-6">
+							<div class="single-popular-post d-flex align-items-center flex-row">
+								{% for c in posts %}
+								<div class="text">
+
+									<h4>
+										<div>
+											<a href="{{ c.get_absolut_url }}">
+												<p>
+													{{ c.title }}
+												</p>
+											</a>
+
+											{% if c.photo %}
+											<img src="{{ c.photo.url }}" alt="Фотография" width="120px" height="150px">
+											{% endif %}
+											<p>{{ c.content|linebreaks|truncatewords:50 }}</p>
+											<p class=>Дата: {{ c.updated|date:"d-m-Y H:i:s" }}</p>
+										</div>
+									</h4>
+
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</section>
+	<!--================ End Popular Post Area =================-->
+{% endblock %}
