@@ -6,7 +6,7 @@ app_name = 'post'
 
 urlpatterns = [
 
-    # path('crafts/', Crafts.as_view(), name="crafts"),
+    # path('craft/', Crafts.as_view(), name="craft"),
     path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),
     # re_path(r'^(?P<article\_id>[0-9]+)/$', views.EArticleView.as\_view(), name='article'),
     # re_path(r'^comment/(?P<article_id>[0-9]+)/$', views.add_comment, name='add_comment'),

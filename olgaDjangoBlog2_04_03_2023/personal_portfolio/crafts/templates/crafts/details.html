@@ -1,0 +1,11 @@
+{% extends 'skills/base.html' %}
+
+{% block content %}
+
+<div class="detail">
+    <h1>{{ crafts.title }}</h1>
+    <h2>--{{ crafts.date|date:'j E Y' }}--</h2>
+    {{ crafts.description|safe }}
+</div>
+
+{% endblock %}

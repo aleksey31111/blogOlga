@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<h1>Поделки </h1>
+
+
+
+
+<h2 class="count" style="align-text:left;">Постов: {{ blogs.count }}</h2>
+
+    {% for blog in blogs %}
+    <div class="element">
+        <h2 class="top"><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></h2>
+        <div class="text">
+                {% if blog.image %}
+                <img src="{{ blog.image.url }}" class="image"  alt="">
+                {% endif %}
+            </div>
+        <div class="blog_text">
+            <h5>Дата создания: {{ blog.date|date:'d.m.y' }}</h5>
+
+            <p>Описание: {{ blog.description|striptags|truncatechars:3600 }}</p>
+
+        </div>
+        <div class="text">
+
+        </div>
+    </div>
+    {% endfor %}
+
+
+{% endblock %}

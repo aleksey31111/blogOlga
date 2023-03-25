@@ -14,7 +14,7 @@ from django.http import HttpResponseRedirect
 
 class HomeListView(ListView):
     model = Articles
-    template_name = "index.html"
+    template_name = "blogs.html"
     context_object_name = 'list_articles'
 
 

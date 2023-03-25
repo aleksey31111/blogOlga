@@ -1,0 +1,5 @@
+admin: 123q456W78
+user1: q1W2e3R4t5Y6u7I
+user2: a1S2d3F4g5H6j7K
+NewUser: mnb1vcx2Z3
+

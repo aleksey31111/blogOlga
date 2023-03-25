@@ -13,7 +13,7 @@ menu = [
 # Variant 1 From 1
 class BlogHome(ListView):
     model = Post
-    template_name = "blog/index.html"
+    template_name = "blog/blogs.html"
     context_object_name = 'posts'
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -27,7 +27,7 @@ class BlogHome(ListView):
 
     # class Crafts(ListView):
     #     model = Post
-    #     template_name = "blog/crafts.html"
+    #     template_name = "blog/craft.html"
     #     context_object_name = 'posts'
     #
     #     def get_context_data(self, *, object_list=None, **kwargs):
@@ -138,7 +138,7 @@ def post_detail(request, slug):
 
 class BlogCategory(ListView):
     model = Post
-    template_name = 'blog/category.html'  # 'index.html'
+    template_name = 'blog/category.html'  # 'blogs.html'
     context_object_name = 'posts'
     allow_empty = False
 
@@ -155,7 +155,7 @@ class BlogCategory(ListView):
 # Variant 2 From 3
 # class BlogCategoryIndex(ListView):
 #     model = Post
-#     template_name = 'blog/index.html'  # 'index.html'
+#     template_name = 'blog/blogs.html'  # 'blogs.html'
 #     context_object_name = 'posts'
 #     allow_empty = False
 #
@@ -173,7 +173,7 @@ class BlogCategory(ListView):
 # Variant 3 From 3
 # class BlogCategorySingleBlog(ListView):
 #     model = Post
-#     template_name = 'blog/single-blog.html'  # 'index.html'
+#     template_name = 'blog/single-blog.html'  # 'blogs.html'
 #     context_object_name = 'posts'
 #     allow_empty = False
 #

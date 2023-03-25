@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div class="detail">
+    <div>
+        <img src="{{ blog.image.url }}" class="image" style="width:200px; height:200px;"  alt="">
+    </div>
+    <h1>url: <a href="{{ blog.url }}" target="_blank">{{ blog.title }}</a></h1>
+
+    <h2>--{{ blog.date|date:'j E Y' }}--</h2>
+
+    {{ blog.description|safe }}
+</div>
+
+
+{% endblock %}

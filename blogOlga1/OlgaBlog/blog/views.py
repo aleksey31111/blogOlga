@@ -11,7 +11,7 @@ menu = [
 
 class BlogHome(ListView):
     model = Blog
-    template_name = "blog/index.html"
+    template_name = "blog/blogs.html"
     context_object_name = 'posts'
 
     def get_context_data(self, *, object_list=None, **kwargs):

@@ -7,6 +7,11 @@
       <sourceFolder url="file://$MODULE_DIR$/hello_world_07_01_2023" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/hello_world_07_01_2023/mysite" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/olgaDjangoBlog_9_01_2023/djangoblog" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/olgaDjangoBlog1_14_02_2023/my_site" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/olgaDjangoBlog3_25_02_2023/todos" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/olgaDjangoBlog2_04_03_2023/personal_portfolio" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/olgaDjangoBlog2_04_03_2023/personal_portfolio/personal_portfolio" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/third_app_avtorizate_user_todos_20_08_2023/todos" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
