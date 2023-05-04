@@ -1,0 +1,139 @@
+@import url("i:/PythonCours/Python/OlgaProject_Archive/font/stylesheet.css");
+body{
+    padding: 0; /* Обнуление отступов*/
+    margin: 0; /* Обнуление отступов */
+    font: 18px 'Migha' Arial, Helvetica, sans-serif; /* Шрифт Migha с Yandex */
+}
+.wrap{ /* Ограничение ширины сайта */
+    max-width: 1200px; /* Максимальная ширина сайта */
+    margin: 0 auto; /* Выравнивание по центру */
+    padding: 10px 30px; /* Отступы Сверху Снизу - 10px, Слева Справа - 30зpx*/
+    box-sizing: border-box; /* Добавление отступов */
+}
+.menu{ /* Отображение меню Для Зарегистрированных и Незарегистрированных Пользователей.*/
+    background: #003366; /* Фоноыфй цвет Для меню*/
+    box-shadow: 0 2px 12px 2px #003366; /* Тень 0px-по Оси Х 2px-по Оси Y 
+            12px-Размытие тени 2px-Расширение тени и Цвет Тени.*/
+}
+ul{ /* Глобальные ul */
+    list-style: none; /* Избавление от маркеров */
+    padding: 0; /* Убирание Отступов */
+}
+.menu ul{ /* ul которые находятся в menu */
+    display: flex; /* Развернем по горизонтали */
+    justify-content: space-between; /* Расположение Горизнтального отображения menu */
+    align-items: center; /* Выравнивание по вертикали по Центру */
+    font-size: 20px; /* Шрифт в menu */
+}
+.menu a{
+    color: #FFF; /* Отображение Цвета Текста в menu */
+}
+a{
+    text-decoration: none; /* Убирание подчеркивания во всех тегах a(Ссылках) */
+}
+.menu .logo{
+    margin-right: 30px; /* Правый отступ в классах menu 30px */
+    color: #FFF; /* Цвкт белый для тнгов в menu */
+}
+.content .wrap{
+    display: flex; /* Выравнивание содержимого страницы по Центру */
+    flex-direction: column; /* Содержимое распологается по Оси Y */
+    align-items: center; /* Выравнивание по ценьру. */
+    justify-content: center; /* Расположение центральное */
+    margin-top: 40px;
+}
+h1, h2{ /* Для заголовков h1 h2 */
+    color: #003366; /* Цвет такой же как в Меню */
+}
+.btn{ /* Для кнопки на какой нибудь  странице */
+    /* Фоновый цвет у кнопки */
+    background: #003366;
+    color: #FFF;
+}
+button{
+    border-radius: 6px; /* Закругление углов кнопки */
+    /* Тень Внутрь. Отступ по Оси X,Y-0px; Размытие тени 6px; */
+    /* Расширение Тени-2px; Цвет кнопки-Белый(FFF) */
+    box-shadow: inset 0 0 6px 2px #FFF;
+    /* Отступы Сверху,Снизу-10px Слева,Справа-40px*/
+    padding: 10px 40px;
+    /* Отступ сверху 40px*/
+    margin-top: 40px;
+    /* Размер текста-20px */
+    font-size: 20px;
+    /* Курсор в виде руки */
+    cursor: pointer;
+}
+.center{
+    /* Выравнивание элементов по Центру*/
+    text-align: center;
+}
+input{ /* Стиль полей ввода */
+    /* Ширина 100% */
+    width: 100px;
+    /* Отступы Свеху,Снизу-6px Слева,Справа-10px */
+    padding: 6px 10px;
+    /* Размер Ввода */
+    box-sizing: border-box;
+    /* Отступ сверху 4px */
+    margin-top: 4px;
+}
+.bg{
+    /* по Оси X-0 по Оси Y-2px Размытие тени-12px Расширение тени-2px*/
+    box-shadow: 0 2px 12px 2px #003366;
+    /* Отступ 40px*/
+    padding: 40px;
+    /* Размер кнопки */
+    box-sizing: border-box;
+    /* Закругление кнопки */
+    border-radius: 6px;
+}
+.top{
+    padding: 4px 20px;
+    margin-top: 0; /* Обнулим отступы */
+    background: transparent; /* фон Прозрачный */
+}
+.content li{
+    /* Отступ по Оси X-0px Y-2px; Размытие тени 8px; */
+    /* Расширение Тени-2px; Цвет кнопки-Который Был(#003366) */
+    box-shadow: 0 2px 8px 2px #003366;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.content a{
+    color: #000;
+    display: block;
+    padding: 20px;
+}
+.but{
+    display: flex;
+    align-items: flex-end;
+}
+.good{
+    background: teal;
+}
+.remove{
+    background: orangered;
+}
+a b{
+    color: orangered;
+}
+.register ul{
+    margin-top: -16px;
+}
+.register li{
+    box-shadow: none;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.helptext{
+    font-size: 14px;
+}
+.register label{
+    color: teal;
+    font-size: 18px;
+    font-weight: bold;
+}
+.register button{
+    margin-top: 18px;
+}
